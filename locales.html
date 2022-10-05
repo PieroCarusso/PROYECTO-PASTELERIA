@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasteleria MarieCake</title>
+
+    <link rel="stylesheet" href="estilos.css">
+    <script src="https://kit.fontawesome.com/e5436282e2.js" crossorigin="anonymous"></script>
+    <link rel ="stylesheet" href="locales.css">
+
+</head onLoad="verifyLetter()">
+<body>
+
+    <div class="header">
+       <img width="30px"src="https://img.icons8.com/ios/50/FFFFFF/crowd.png"/>
+           <a href="#">Quienes Somos</a>
+           <img width="30px"src="https://img.icons8.com/ios-filled/50/FFFFFF/wedding-cake.png"/>
+           <a href="">Productos</a>
+           <h2 style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Pastelería y Dulcería MarieCake</h2> 
+           <img width="35px"src="https://img.icons8.com/ios/50/FFFFFF/storytelling.png"/>
+           <a href="">Recetas</a>
+           <img width="35px"src="https://img.icons8.com/wired/64/FFFFFF/map.png"/>
+           <a href="">Locales</a>
+        </div> <br><br><br><br><br>
+        <a href="./inicio.html"><img width="30px" src="./IMAGENES/Return/flecha return.png"></a>
+        <button onclick="modifyLetter(40)"><img src="https://img.icons8.com/ios-filled/50/000000/add-text.png"/></button>
+            <button onclick="modifyLetter(20)"><img src="https://img.icons8.com/ios-filled/50/000000/decrease-font.png"/></button>
+
+      <div class="titles">
+        
+        <h1>Locales y Horarios<br><img src="https://img.icons8.com/glyph-neue/64/f7bfbe/clock--v1.png"/></h1>
+      </div>
+
+      <div class="container">
+        <div class="card">
+           <div class="contenido">
+           <h2>Atención de Delivery</h2>
+           <h3>Lunes a Domingo de 7am a 10pm</h3>
+          <p>-Angamos: Angamos Oeste 1494 <br>
+             -Magdalena: Rocca Vergallo 201 <br>
+             -Chacarilla: Primavera 373 <br>
+             -Miraflores: Vasco Nuñez de Balboa 770<br>
+             -La Molina: Av. Raúl Ferrero 1200 <br>
+             -Surco: Av. El Polo 695. Centro Comercial Urban Plaza<br>
+             -Surco: Av. La Encalada 106 </p>
+          </div>
+        </div>
+      
+       <div class="card">
+          <div class="contenido">
+           <h2>Atención en Tienda</h2>
+           <h3>Terrazas, Salones y Bodegas
+            Lunes a Domingo de 7am a 11pm</h3>
+          <p>-Angamos: Angamos Oeste 1494<br>
+             -Magdalena: Rocca Vergallo 201<br>
+             -Chacarilla: Primavera 373<br>
+             -Miraflores: Vasco Nuñez de Balboa 770<br>
+             -La Molina: Av. Raúl Ferrero 1200<br>
+             -Surco: Av. El Polo 695. Centro Comercial Urban Plaza<br>
+             -Surco: Av. La Encalada 106</p>
+          </div>
+        </div>
+      </div>
+      <div class="imagen">
+        
+      <figure>
+        <img src="./IMAGENES/Locales/locales.png">
+      </figure>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.0183386434055!2d-77.0451676854844!3d-12.110896991424635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8384e84080b%3A0xa825d46001f5698!2sAv.%20Angamos%20Oeste%201494%2C%20Miraflores%2015073!5e0!3m2!1ses-419!2spe!4v1660931833625!5m2!1ses-419!2spe" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <footer>
+        <div class = "ayuda">
+        <img width="50px" src="https://img.icons8.com/pastel-glyph/64/FFFFFF/phone-arrow.png"/>
+        <a href="#" class="link-footer">Contactanos</a>
+        <img  width="50px"src="https://img.icons8.com/ios-filled/50/FFFFFF/end-call-male.png"/>
+        <a href="#" class="link-footer">Servicio al cliente</a>
+        <img width="55px"src="https://img.icons8.com/carbon-copy/100/FFFFFF/apple-books.png"/>
+        <a href="#" class="link-footer">Libro de Reclamaciones</a>
+        <img width="50px"src="https://img.icons8.com/dotty/80/FFFFFF/help.png"/>
+        <a href="#" class="link-footer">Ayuda</a>
+    </div>
+    <div class="social">
+    </div>
+
+  
+
+     </footer>
+
+<!-- AUMENTAR Y DISMINUIR-->
+
+
+
+<script>
+  let h1 = !!localStorage.getItem("ls_h1_letter") ? localStorage.getItem("ls_h1_letter") : '20'
+  let h2 = !!localStorage.getItem("ls_h2_letter") ? localStorage.getItem("ls_h2_letter") : '18'
+  let h3 = !!localStorage.getItem("ls_h3_letter") ? localStorage.getItem("ls_h3_letter") : '16'
+  let h4 = !!localStorage.getItem("ls_h4_letter") ? localStorage.getItem("ls_h4_letter") : '14'
+  let h5 = !!localStorage.getItem("ls_h5_letter") ? localStorage.getItem("ls_h5_letter") : '12'
+  let h6 = !!localStorage.getItem("ls_h6_letter") ? localStorage.getItem("ls_h6_letter") : '10'
+  let p = !!localStorage.getItem("ls_p_letter") ? localStorage.getItem("ls_p_etter") : '12'
+  
+  const updateLetter = () => {
+      verifyLetter()
+      const listH1 = document.getElementsByTagName("h1")
+      for (var i = 0; i < listH1.length; i++) {
+          var h1_letter = listH1[i];
+          if (!!h1_letter) {
+              h1_letter.className = ""
+              h1_letter.classList.add(`h1-${h1}`)
+          }
+      }
+       
+      const listH2 = document.getElementsByTagName("h2")
+      console.log(listH2)
+      for (var i = 0; i < listH2.length; i++) {
+          var h2_letter = listH2[i];
+          if (!!h2_letter) {
+              h2_letter.className = ""
+              h2_letter.classList.add(`h2-${h2}`)
+          }
+      }
+  
+      const listH3 = document.getElementsByTagName("h3")
+          console.log(listH3)
+          for (var i = 0; i < listH3.length; i++) {
+              var h3_letter = listH3[i];
+              if (!!h3_letter) {
+                  h3_letter.className = ""
+                  h3_letter.classList.add(`h3-${h3}`)
+              }
+          }
+      
+      
+      const listP = document.getElementsByTagName("p")
+      for (var i = 0; i < listP.length; i++) {
+          var p_letter = listP[i]
+          if (!!p_letter) {
+              p_letter.className = ""
+              p_letter.classList.add(`h1-${p}`)
+          }
+      }
+      const listA = document.getElementsByTagName("a")
+      for (var i = 0; i < listA.length; i++) {
+          var a_letter = listA[i]
+          if (!!a_letter) {
+              a_letter.className = ""
+              a_letter.classList.add(`a-${a}`)
+          }
+      } 
+  
+  
+  
+  }
+  const modifyLetter = number => {
+  localStorage.setItem("ls_h1_letter", number)
+  localStorage.setItem("ls_h2_letter", number)
+  localStorage.setItem("ls_h3_letter", number)
+  localStorage.setItem("ls_h4_letter", number)
+  localStorage.setItem("ls_h5_letter", number)
+  localStorage.setItem("ls_h6_letter", number)
+  localStorage.setItem("ls_p_letter", number)
+  
+  updateLetter()
+  }
+  
+  const verifyLetter = () => {
+  h1 = localStorage.getItem("ls_h1_letter")
+  h2 = localStorage.getItem("ls_h2_letter")
+  h3 = localStorage.getItem("ls_h3_letter")
+  h4 = localStorage.getItem("ls_h4_letter")
+  h5 = localStorage.getItem("ls_h5_letter")
+  h6 = localStorage.getItem("ls_h6_letter")
+  p = localStorage.getItem("ls_p_letter")
+  }
+  
+  </script>
+
+
+
+
+</body>
+</html>

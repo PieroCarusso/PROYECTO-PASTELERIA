@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasteleria MarieCake</title>
+    <script src="https://kit.fontawesome.com/e5436282e2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="catalogo.css">
+    <link rel="stylesheet"  href="tortas.css">
+   
+
+</head>
+<body>
+
+    <div class="header">
+        <img width="30px"src="https://img.icons8.com/ios/50/FFFFFF/crowd.png"/>
+            <a href="./QuienesSomos.html">Quienes Somos</a>
+            <img width="30px"src="https://img.icons8.com/ios-filled/50/FFFFFF/wedding-cake.png"/>
+            <a href="./producto.html">Productos</a>
+            <h2 style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Pastelería y Dulcería MarieCake</h2> 
+            <img width="35px"src="https://img.icons8.com/ios/50/FFFFFF/storytelling.png"/>
+            <a href="./recetas.html">Recetas</a>
+            <img width="35px"src="https://img.icons8.com/wired/64/FFFFFF/map.png"/>
+            <a href="./locales.html">Locales</a>
+         </div> <br><br><br><br><br>
+    <div class="frame">
+          <h1 style="color:palevioletred"> Proceso de Compra</h1>
+          <h2>Piernitas al Horno Bañadas en salsa BBQ</h2>
+          <img class="logotortas" src="IMAGENES/logo princiopal .png">
+          <img width="600px" width="400px" src="./IMAGENES/Bocaditos/1- piernitas a la bbq.jfif">
+          <p>Piernitas de Pollo seleccionadas con una jugosa salsa BBQ para chuparse los dedos</p>
+    </div>
+<section class="form-wrapper">
+    <div class="formulario">
+        <label>Bandeja (30 Unidades)</label>
+        <select class="item-formulario" type="amount" placeholder="Cantidad" id="amount" required>
+            
+            <option>1 </option>
+            <option>2 </option>
+            <option>3 </option>
+            <option>4 </option>
+            <option>5 </option>
+        </select>
+    <br>
+
+<a onclick="viewCarrito()" target="_blank" class="form-item btn btn-login">Ver Carrito<img src="https://img.icons8.com/ios/50/000000/favorite-cart.png"/></a>
+            
+    </div>
+</section>
+
+<footer>
+    <div class = "ayuda">
+    <img width="50px" src="https://img.icons8.com/pastel-glyph/64/FFFFFF/phone-arrow.png"/>
+    <a href="#" class="link-footer">Contactanos</a>
+    <img  width="50px"src="https://img.icons8.com/ios-filled/50/FFFFFF/end-call-male.png"/>
+    <a href="#" class="link-footer">Servicio al cliente</a>
+    <img width="50px"src="https://img.icons8.com/carbon-copy/100/FFFFFF/apple-books.png"/>
+    <a href="#" class="link-footer">Libro de Reclamaciones</a>
+    <img width="50px"src="https://img.icons8.com/dotty/80/FFFFFF/help.png"/>
+    <a href="#" class="link-footer">Ayuda</a>
+</div>
+<div class="social">
+</div>
+
+ </footer>
+ <script>
+    const viewCarrito = () => {
+        name = "Piernitas al Horno en Salsa BBQ"
+        image = "/IMAGENES/Bocaditos/1- piernitas a la bbq.jfif"
+        amount = document.getElementById("amount").value
+
+        localStorage.setItem("data", amount)
+        
+        window.location.href= `./carrito-bocaditos.html?name=${name}&image=${image}`
+    }
+
+  
+ </script>
+      
+</body>

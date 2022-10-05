@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasteleria MarieCake</title>
+
+    <link rel="stylesheet" href="estilos.css">
+    <script src="https://kit.fontawesome.com/e5436282e2.js" crossorigin="anonymous"></script>
+    <link rel ="stylesheet" href="locales.css">
+    <link rel="stylesheet" href="foot.css">
+
+</head>
+<body onLoad="verifyLetter()">
+
+    <div class="header">
+       <img width="30px"src="https://img.icons8.com/ios/50/FFFFFF/crowd.png"/>
+           <a href="#">Quienes Somos</a>
+           <img width="30px"src="https://img.icons8.com/ios-filled/50/FFFFFF/wedding-cake.png"/>
+           <a href="">Productos</a>
+           <h2 style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Pastelería y Dulcería MarieCake</h2> 
+           <img width="35px"src="https://img.icons8.com/ios/50/FFFFFF/storytelling.png"/>
+           <a href="">Recetas</a>
+           <img width="35px"src="https://img.icons8.com/wired/64/FFFFFF/map.png"/>
+           <a href="">Locales</a>
+        </div> <br><br><br><br><br>
+        <a href="./inicio.html"><img width="30px" src="./IMAGENES/Return/flecha return.png"></a>
+        <button onclick="modifyLetter(40)"><img src="https://img.icons8.com/ios-filled/50/000000/add-text.png"/></button>
+            <button onclick="modifyLetter(20)"><img src="https://img.icons8.com/ios-filled/50/000000/decrease-font.png"/></button>
+  <div class="titulos">
+    <h1>Servicio al cliente</h1>
+<p>Términos y condiciones del servicio al cliente
+
+    Nuestro personal de servicio al cliente está disponible de lunes a sábado de 9 am a 6 pm. <br>
+     Si desea realizar un nuevo pedido, tiene una consulta con respecto a una orden existente o desea <br>
+     obtener más información sobre nuestros productos, puede ponerse en contacto con nosotros por <br>
+     correo electrónico a info@MarieCake.com.pe o llame al +51 (1) 421-4047, 966295915 o 945950253 <br><br>
+    
+    
+    Entrega y Envío <br><br>
+    
+    Las tortas recién horneadas y cupcakes están disponibles para ser entregados por servicio de delivery de lunes a sábado en 2 rangos de entrega: <br>
+    primer turno de 9:00 am a 1:00 pm y segundo turno 2:00pm a 6:00pm (consulte por días festivos). Simplemente elija una fecha de entrega y un rango de <br>
+    tiempo cuando realice su pedido en línea, por teléfono o en la tienda – taller. <br>
+    
+    El servicio de delivery tiene un costo adicional de acuerdo con el distrito de entrega. Nuestro servicio de delivery solo abarca algunos<br>
+     puntos dentro de Lima Metropolitana. <br>
+    
+    Brinde instrucciones claras de la dirección de entrega y un número de contacto para nuestro conductor. Si, por alguna razón, la entrega no <br>
+     puede ser aceptada en el momento y lugar acordados, nuestro conductor retornara su pedido al taller y lo almacenaremos solo por las próximas <br>
+     24 horas, durante las cuales usted puede llamarnos para solicitar la re-entrega. El costo de esta nueva entrega recae exclusivamente en el cliente. <br><br>
+    
+    Los cambios a los pedidos actuales <br><br>
+    
+    Si ha detectado un error en la confirmación de su pedido o desea hacer cambios en una orden existente, debe comunicarlo hasta 7 días antes de la entrega<br>
+     o recogida. Este plazo aplica para todas las decoraciones personalizadas, pasteles de bodas o cualquier otro tipo de pasteles y cupcakes de nuestras <br>
+     colecciones de cumpleaños y ocasiones especiales. Este tiempo está sujeto a la capacidad de atención del taller de Dulcefina, y tienes que tener en<br>
+      cuenta que esta solicitud puede ser rechazada. <br><br>
+    
+    Tenga en cuenta que cualquier cambio en su orden actual podría generar un costo adicional. Por lo tanto, recomendamos que los clientes siempre revisen <br>
+     los detalles del pedido, como fechas, tamaño de la torta y mensajes personales, antes de confirmar su pedido, ya que no podemos ofrecer reembolsos <br>
+      o reemplazos si se ha dado información incorrecta. <br> <br>
+    
+   </p>
+  </div>     
+  <!-- AUMENTAR Y DISMINUIR-->
+
+
+
+<script>
+    let h1 = !!localStorage.getItem("ls_h1_letter") ? localStorage.getItem("ls_h1_letter") : '20'
+    let h2 = !!localStorage.getItem("ls_h2_letter") ? localStorage.getItem("ls_h2_letter") : '18'
+    let h3 = !!localStorage.getItem("ls_h3_letter") ? localStorage.getItem("ls_h3_letter") : '16'
+    let h4 = !!localStorage.getItem("ls_h4_letter") ? localStorage.getItem("ls_h4_letter") : '14'
+    let h5 = !!localStorage.getItem("ls_h5_letter") ? localStorage.getItem("ls_h5_letter") : '12'
+    let h6 = !!localStorage.getItem("ls_h6_letter") ? localStorage.getItem("ls_h6_letter") : '10'
+    let p = !!localStorage.getItem("ls_p_letter") ? localStorage.getItem("ls_p_etter") : '12'
+    
+    const updateLetter = () => {
+        verifyLetter()
+        const listH1 = document.getElementsByTagName("h1")
+        for (var i = 0; i < listH1.length; i++) {
+            var h1_letter = listH1[i];
+            if (!!h1_letter) {
+                h1_letter.className = ""
+                h1_letter.classList.add(`h1-${h1}`)
+            }
+        }
+         
+        const listH2 = document.getElementsByTagName("h2")
+        console.log(listH2)
+        for (var i = 0; i < listH2.length; i++) {
+            var h2_letter = listH2[i];
+            if (!!h2_letter) {
+                h2_letter.className = ""
+                h2_letter.classList.add(`h2-${h2}`)
+            }
+        }
+    
+        const listH3 = document.getElementsByTagName("h3")
+            console.log(listH3)
+            for (var i = 0; i < listH3.length; i++) {
+                var h3_letter = listH3[i];
+                if (!!h3_letter) {
+                    h3_letter.className = ""
+                    h3_letter.classList.add(`h3-${h3}`)
+                }
+            }
+        
+        
+        const listP = document.getElementsByTagName("p")
+        for (var i = 0; i < listP.length; i++) {
+            var p_letter = listP[i]
+            if (!!p_letter) {
+                p_letter.className = ""
+                p_letter.classList.add(`h1-${p}`)
+            }
+        }
+        const listA = document.getElementsByTagName("a")
+        for (var i = 0; i < listA.length; i++) {
+            var a_letter = listA[i]
+            if (!!a_letter) {
+                a_letter.className = ""
+                a_letter.classList.add(`a-${a}`)
+            }
+        } 
+    
+    
+    
+    }
+    const modifyLetter = number => {
+    localStorage.setItem("ls_h1_letter", number)
+    localStorage.setItem("ls_h2_letter", number)
+    localStorage.setItem("ls_h3_letter", number)
+    localStorage.setItem("ls_h4_letter", number)
+    localStorage.setItem("ls_h5_letter", number)
+    localStorage.setItem("ls_h6_letter", number)
+    localStorage.setItem("ls_p_letter", number)
+    
+    updateLetter()
+    }
+    
+    const verifyLetter = () => {
+    h1 = localStorage.getItem("ls_h1_letter")
+    h2 = localStorage.getItem("ls_h2_letter")
+    h3 = localStorage.getItem("ls_h3_letter")
+    h4 = localStorage.getItem("ls_h4_letter")
+    h5 = localStorage.getItem("ls_h5_letter")
+    h6 = localStorage.getItem("ls_h6_letter")
+    p = localStorage.getItem("ls_p_letter")
+    }
+    
+    </script>
+</body> 
+</html> 

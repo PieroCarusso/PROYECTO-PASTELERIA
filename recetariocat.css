@@ -1,0 +1,54 @@
+
+.titles img{
+    display: flex;
+    margin: auto;
+}
+.titles h1{
+color: palevioletred;
+justify-content: center;
+text-align: center;
+
+}
+
+.titles h3{
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+padding: 10px;
+text-decoration: underline;
+justify-content: center;
+text-align: center;
+}
+
+.titles p{
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+
+/* BOTON REGISTRAR */
+
+.btn-general{
+    width: 100%;
+    padding: 5px 15px;
+    box-shadow: 4px 2px 2px 2px pink;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.btn-login{
+    border: 1px solid pink;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    max-width: 150px;
+    margin: 20px auto;
+    text-decoration: none;
+    color: palevioletred;
+}
+
+.btn-login:hover{
+    color: black;
+    background-color: pink;
+}

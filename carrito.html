@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasteleria MarieCake</title>
+    <script src="https://kit.fontawesome.com/e5436282e2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="catalogo.css">
+    <link rel="stylesheet" href="carrito.css">
+ 
+</head>
+<body onload="loadData()">
+
+  <div class="header">
+    <img width="30px"src="https://img.icons8.com/ios/50/FFFFFF/crowd.png"/>
+        <a href="./QuienesSomos.html">Quienes Somos</a>
+        <img width="30px"src="https://img.icons8.com/ios-filled/50/FFFFFF/wedding-cake.png"/>
+        <a href="./producto.html">Productos</a>
+        <h2 style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Pastelería y Dulcería MarieCake</h2> 
+        <img width="35px"src="https://img.icons8.com/ios/50/FFFFFF/storytelling.png"/>
+        <a href="./recetas.html">Recetas</a>
+        <img width="35px"src="https://img.icons8.com/wired/64/FFFFFF/map.png"/>
+        <a href="./locales.html">Locales</a>
+     </div> <br><br><br><br><br>
+
+    <div class="carrito">
+        <h1 style="color:palevioletred">Carrito de Compras</h1>
+       </div>
+       <h2 style="color:palevioletred" id="name"></h2>
+       <div class="frame">
+        <img class="logotorta" id="image" />
+        <img class="logotortas" src="IMAGENES/logo princiopal .png">
+        </div>
+       
+ 
+    <table>
+        <tr>
+          <th>Producto</th>
+          <th>Precio</th>
+          <th>Cantidad</th>
+          <th>Peso</th>
+          <th>Tematica</th>
+          <th>Agregados</th>
+          <th>SubTotal</th>
+        </tr>
+        <tr>
+          <td>Tortas de la Casa</td>
+          <td id="price"></td>
+          <td id="amount"></td>
+          <td id="weight"></td>
+          <td id="thema"></td>
+          <td id="agregado"></td>
+          <td id="total"></td>
+          
+        </tr>
+        
+       
+      </table>
+    
+
+      <div class="total-carrito" style="box-sizing: border-box;display: flex; flex-direction: row; justify-content: space-between; flex-wrap: nowrap;">
+        <div style="width: 50%; display: flex; flex-direction: row;">
+          <input class="item-form" type="code" placeholder="Código de Cupón" id="code" style="max-width: 150px" required>
+          <a href="#" >Aplicar Cupón</a>
+        </div>
+        <div style="width: 50%; text-align: right;">
+          <a href="#" target="_blank">Actualizar Carrito</a>
+        </div>
+      </div>
+
+      <div class="total-carrito">
+        <h3>Total Del Carrito</h3>
+        <p><b>Subtotal: </b><span id="sub01"></span></p>
+        <a href="./finalizar-compra.html" target="_blank" class="form-item btn-general btn-login" class="btn btn-login">Finalizar Compra</a>
+      </div>
+      
+
+      <footer>
+        <div class = "ayuda">
+        <img width="50px" src="https://img.icons8.com/pastel-glyph/64/FFFFFF/phone-arrow.png"/>
+        <a href="#" class="link-footer">Contactanos</a>
+        <img  width="50px"src="https://img.icons8.com/ios-filled/50/FFFFFF/end-call-male.png"/>
+        <a href="#" class="link-footer">Servicio al cliente</a>
+        <img width="50px"src="https://img.icons8.com/carbon-copy/100/FFFFFF/apple-books.png"/>
+        <a href="#" class="link-footer">Libro de Reclamaciones</a>
+        <img width="50px"src="https://img.icons8.com/dotty/80/FFFFFF/help.png"/>
+        <a href="#" class="link-footer">Ayuda</a>
+    </div>
+    <div class="social">
+    </div>
+
+     </footer>
+
+     <script>
+      let name = ""
+      let image = ""
+      const loadData = () => {
+        getParams()
+        price = 70
+        data = localStorage.getItem("data")
+        document.getElementById("amount").innerText = data
+        document.getElementById("price").innerText = `s/${price}.00`
+        document.getElementById("total").innerText = price * data
+        document.getElementById("sub01").innerText = price * data
+        /*
+        document.getElementById("weight").innerText = data
+        document.getElementById("thema").innerText = data
+        document.getElementById("agregado").innerText = data
+        */
+      }
+      
+      const getParams = () => {
+        const queryString = window.location.search
+        data = queryString.split("&")
+        fillData(data)
+      }
+
+      const fillData = data => {
+        name = decodeURI(data[0].split("=")[1])
+        image = decodeURI(data[1].split("=")[1])
+        document.getElementById("name").innerText = name
+        document.getElementById("image").src = image
+      }
+     </script>
+
+      </body>
+      </html>

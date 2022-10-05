@@ -1,0 +1,86 @@
+/* CASI AL PIE DE LA PAGINA */
+
+.container__form{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    background-color: #f2e0db;
+}
+.main p{
+    padding: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.main h2{
+    padding: 90px;
+    font-size: 40px;
+    text-align: center;
+    color: black;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.main__contact{
+    display: flex-end;
+    justify-content: right;
+}
+
+
+/* CONTAINER DOS */
+
+
+.container__foot{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    background-color: #f2e0db;
+}
+.main__foot p{
+    padding: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+}
+
+
+.main__foot h2{
+    padding-top: 40px;
+    justify-content: center;
+   
+    font-size: 40px;
+    text-align: center;
+    color: black;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.main__foot h3{
+    justify-content: center;
+    padding-top: 170px;
+    font-size: 25px;
+    text-align: center;
+    color: black;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.main__foot{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.main__foot img{
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    margin: 0 auto;
+    
+}
+
+

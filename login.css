@@ -1,0 +1,198 @@
+main{
+    margin: auto;
+    width: 90%;
+    background-color: white;
+    background-image: linear-gradient(to left,rgba(255,255,255,0.472),
+    rgba(255,255,255,0.365));
+    overflow: hidden;
+    padding: 1em;
+    border-radius: 1em;
+    display: grid;
+    grid-auto-rows: max-content;
+    grid-template-columns: repeat(auto-fit,minmax(310px,1fr));
+    gap: .6em;
+    animation: mostrar 1.5s ease-in-out;
+}
+
+@keyframes mostrar{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+.main__figure{
+    overflow: hidden;
+    border-radius: 1em;
+    display: flex;
+
+}
+
+.main img{
+    margin:auto;
+    width: 80%;
+    max-width: 60vw;
+}
+
+.main__contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5em;
+    padding: 3em .7em;
+    text-align: center;
+
+}
+
+.main__form{
+    display: grid;
+    justify-items: center;
+    gap: 1.5em;
+
+}
+
+.main__input{
+    width: 80%;
+    max-width: 500px;
+    padding: 1em;
+    font: inherit;
+    border-radius: .6em;
+    border-color: pink;
+    
+}
+
+
+
+.main__input--send{
+    background-color: #DC3F31;
+    color: white;
+    font-weight: 600;
+}
+
+.main__tile{
+    font-size: 2.3rem;
+}
+
+.main__paragraph{
+    margin: 3em 0;
+}
+
+.main__icon{
+    width: 30px;
+    height: 30px;
+}
+
+.main__social{
+    display: grid;
+    grid-auto-flow:column;
+    justify-content: center;
+    grid-auto-columns: max-content;
+    gap: 1em;
+}
+
+.main__link{
+    border: 1px solid pink;
+    border-radius: 10px;
+    padding: .6em 1.5em;
+
+
+}
+
+.main__link:hover{
+    background-color: pink;
+}
+
+.ultimo a{
+    text-decoration: none;
+}
+
+.btn-general{
+    width: 80%;
+    max-width: 500px;
+    padding: 1em;
+    border-radius: 0.6em;
+    border-color: pink;
+    color: white;
+    background-color: pink;
+}
+
+.btn-general:hover{
+    background-color: white;
+    color: black;
+}
+
+
+.main-input
+{
+    width: 80%;
+    max-width: 500px;
+    padding: 1em;
+    font: inherit;
+    border-radius: .6em;
+    border-color: pink;
+    background-color: pink;
+}
+
+.btn{
+    width: 80%;
+    max-width: 500px;
+    padding: 1em;
+    font: inherit;
+    border-radius: .6em;
+    border-color:pink;
+    background-color: pink; 
+}
+
+.container__form{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.btn__register{
+    border-radius: 15px;
+    box-shadow: 0 2px 2px 2px  rgb(68, 68, 68, 0.25);
+    border: 1px solid pink;
+    background-color: pink;
+    transition: .5s;
+}
+
+.btn__register:hover{
+    transform: translateY(-10px);
+}
+
+.btn__login{
+    border-radius: 15px;
+    box-shadow: 0 2px 2px 2px  rgb(68, 68, 68, 0.25);
+    border: 1px solid pink;
+    background-color: pink;
+    transition: .5s;
+}
+
+.btn__login:hover{
+    transform: translateY(-10px);
+}
+
+
+
+.ultimo a {
+    color: palevioletred;
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+.main__contact h2{
+    color: palevioletred;
+    font-size: 35px;
+    margin: auto;
+}
+
+.main__contact p{
+    margin: auto;
+    color:palevioletred;
+    font-size: 20px;
+}
+

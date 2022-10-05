@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasteleria MarieCake</title>
+    <script src="https://kit.fontawesome.com/e5436282e2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="catalogo.css">
+    <link rel="stylesheet"  href="tortas.css">
+
+</head>
+<body>
+
+    <div class="header">
+        <img width="30px"src="https://img.icons8.com/ios/50/FFFFFF/crowd.png"/>
+            <h3>Quienes Somos</h3>
+            <img width="30px"src="https://img.icons8.com/ios-filled/50/FFFFFF/wedding-cake.png"/>
+            <h3>Productos</h3>
+            <h2>Pastelería y Dulcería MarieCake</h2> 
+            <img width="35px"src="https://img.icons8.com/ios/50/FFFFFF/storytelling.png"/>
+            <h3>Recetas</h3>
+            <img width="35px"src="https://img.icons8.com/wired/64/FFFFFF/map.png"/>
+            <h3>Locales</h3>
+    </div><br><br><br><br><br>
+    <div class="frame">
+          <h1> Proceso de Compra</h1>
+          <img class="logotortas" src="IMAGENES/logo princiopal .png">
+          <h2>Torta de Naranja con Chocolate</h2>
+          <img width="600px" width="400px" src="./IMAGENES/Recetario/03-Torta de Naranja - chocolate.jpg">
+          <p>Hecha de con los chocolate español y ralladura de naranja </p>
+    </div>
+    <section class="form-wrapper">
+        <div class="formulario">
+            <label>Cantidad</label>
+            <select class="item-formulario" type="amount" placeholder="Cantidad" id="amount" required>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+            <label>Peso</label>
+          <select class="item-formulario" type="weight" placeholder="Peso" id="weight" required><br><br><br><br><br><br><br>
+            <option>1/2kg</option>
+            <option>1kg</option>
+            <option>1kg 1/2</option>
+            <option>2kg</option>
+          </select>
+    
+          <label>Agregar Temática<img width="50px" src="./IMAGENES/Metaforas/Agregar/a_tematica.png"> </label>
+          <select class="item-formulario" type="thema" placeholder="Temática" id="thema" required><br><br><br>
+            <option>Cumpleaños</option>
+            <option>Bautizo</option>
+            <option>Matrimonio</option>
+            <option>Graduacion</option>
+        </select>
+    
+        <label>Agregados<img width="30px"  src="./IMAGENES/Metaforas/Agregar/a_agregados.png"></label>
+        <select class="item-formulario" type="agregado" placeholder="Agregados" id="agregado" required><br><br><br>
+            <option>Cheesecake Bites</option>
+            <option>Arandanos</option>
+            <option>Fresas congeladas</option>
+            <option>Chispas de Chocolate</option>
+        </select><br>
+    
+    <a onclick="viewCarrito()" target="_blank" class="form-item btn btn-login">Ver Carrito<img src="https://img.icons8.com/ios/50/000000/favorite-cart.png"/></a>
+                
+        </div>
+    </section>
+
+<footer>
+    <div class = "ayuda">
+    <img width="50px" src="https://img.icons8.com/pastel-glyph/64/FFFFFF/phone-arrow.png"/>
+    <a href="#" class="link-footer">Contactanos</a>
+    <img  width="50px"src="https://img.icons8.com/ios-filled/50/FFFFFF/end-call-male.png"/>
+    <a href="#" class="link-footer">Servicio al cliente</a>
+    <img width="50px"src="https://img.icons8.com/carbon-copy/100/FFFFFF/apple-books.png"/>
+    <a href="#" class="link-footer">Libro de Reclamaciones</a>
+    <img width="50px"src="https://img.icons8.com/dotty/80/FFFFFF/help.png"/>
+    <a href="#" class="linl-footer">Ayuda</a>
+</div>
+<div class="social">
+</div>
+
+ </footer>
+ <script>
+    const viewCarrito = () => {
+        name = "Torta De Naranja con Chocolate"
+        image = "./IMAGENES/Recetario/03-Torta de Naranja - chocolate.jpg"
+        amount = document.getElementById("amount").value
+
+        localStorage.setItem("data", amount)
+        
+        window.location.href= `./carrito.html?name=${name}&image=${image}`
+    }
+</script>
+      
+</body>
+</html>

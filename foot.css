@@ -1,0 +1,12 @@
+.titulos h1{
+    color: palevioletred;
+}
+
+.titulos p{
+    padding: 10px;
+    margin: auto;
+    font-size: 20px;
+    justify-content: center;
+    text-align: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasteleria MarieCake</title>
+
+    <link rel="stylesheet" href="estilos.css">
+    <script src="https://kit.fontawesome.com/e5436282e2.js" crossorigin="anonymous"></script>
+    <link rel ="stylesheet" href="recetariocat.css">
+
+</head>
+<body onLoad="verifyLetter()">
+
+    <div class="header">
+       <img width="30px"src="https://img.icons8.com/ios/50/FFFFFF/crowd.png"/>
+           <a href="#">Quienes Somos</a>
+           <img width="30px"src="https://img.icons8.com/ios-filled/50/FFFFFF/wedding-cake.png"/>
+           <a href="">Productos</a>
+           <h2 style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Pastelería y Dulcería MarieCake</h2> 
+           <img width="35px"src="https://img.icons8.com/ios/50/FFFFFF/storytelling.png"/>
+           <a href="">Recetas</a>
+           <img width="35px"src="https://img.icons8.com/wired/64/FFFFFF/map.png"/>
+           <a href="">Locales</a>
+        </div> <br><br><br><br><br>
+        
+        <a href="./recetas.html"><img width="30px" src="./IMAGENES/Return/flecha return.png"></a>
+        <button onclick="modifyLetter(40)"><img src="https://img.icons8.com/ios-filled/50/000000/add-text.png"/></button>
+            <button onclick="modifyLetter(20)"><img src="https://img.icons8.com/ios-filled/50/000000/decrease-font.png"/></button>
+        <div class="titles">
+            <h1>Receta Torta Angel Food Cake</h1>
+            <figure>
+                <img width="400px" src="./IMAGENES/Recetario/05-angel food cake.jpg">
+            </figure>
+            <h3>Ingredientes para la Selva Negra:</h3>
+            <p> -6 huevos<br>
+                -180 g de azúcar<br>
+                -140 g de harina 0000<br>
+                -40 g de cacao amargo<br>
+                -50 g de manteca<br>
+            </p>
+            <h3>Ingredientes para el relleno 1:</h3>
+            <p>
+                -200 g de guindas o cerezas al natural sin carozos<br>
+                -100 cc de almíbar de las guindas<br>
+                -50 cc de kirsch<br>
+                -1 cucharada de almidón de maíz<br>
+                -360 g de crema de leche<br>
+                -40 g de azúcar<br>
+            </p>
+            <h3>Ingredientes para el relleno 2:</h3>
+            <p>
+                -500 g de crema de leche<br>
+                -200 g de chocolate semiamargo
+            </p>
+            <h3>Armado:</h3>
+            <p>
+                -Almíbar al kirsch
+                -Virutas de chocolate
+                -Guindas o cerezas para decorar
+                -40 g de azúcar
+            </p>
+            <h3>Preparación para la Selva Negra:</h3>
+            <p>
+                Batir los huevos con el azúcar sobre bano Maria hasta entibiar, a unos 45°C <br>
+                aproximadamente.Retirar del calor y batir hasta llegar a punto letra.<br>
+                Agregar la harina tamizada con el cacao con movimientos envolventes con espátula de goma.<br>
+                Finalmente anadir la manteca derretida. Volcar la masa en tres moldes de 22 cm<br>
+                empapelados y enmantecados. Hornear a 180°C durante 15 a 18 minutos.<br>
+            </p>
+            <h3>Preparación del relleno 1:</h3>
+            <p>
+                Colocar el almíbar con el kirsch y el almidón en una cacerola y cocinar hasta espesar, luego un <br>
+                minuto más. Incorporar rápidamente las guindas y dejar enfriar. Batir la crema fría con el azúcar <br>
+                hasta lograr una crema tipo Chantilly.
+            </p>
+            <h3>Preparación del relleno 2:</h3>
+            <p>Fundir el chocolate con 100 g de crema caliente. Entibiar y agregar el resto de la crema batida<br>
+                a medio punto.</p>
+
+           <h3>Preparación del armado</h3>
+           <p>
+            Colocar en la base un genoise y cubrir con la crema chantilly y la compota de guindas fría. <br>
+            Poner otro genoise y cubrir con el relleno de chocolate. Enfriar. Cubrir las paredes <br>
+            y la superficie con crema. Decorar con las virutas de chocolate u las guindas o las cerezas. <br>
+           </p>
+
+          </div>
+          <div class="container__form">
+    
+            <section class="main">
+              <div class="main__contact">
+               
+               <a href=".#"class="form-item btn-general btn-login" class="btn btn-login">Descargar Receta</a>
+            </div>
+            </section>
+
+          <footer>
+            <div class = "ayuda">
+            <img width="50px" src="https://img.icons8.com/pastel-glyph/64/FFFFFF/phone-arrow.png"/>
+            <a href="#" class="link-footer">Contactanos</a>
+            <img  width="50px"src="https://img.icons8.com/ios-filled/50/FFFFFF/end-call-male.png"/>
+            <a href="#" class="link-footer">Servicio al cliente</a>
+            <img width="55px"src="https://img.icons8.com/carbon-copy/100/FFFFFF/apple-books.png"/>
+            <a href="#" class="link-footer">Libro de Reclamaciones</a>
+            <img width="50px"src="https://img.icons8.com/dotty/80/FFFFFF/help.png"/>
+            <a href="#" class="link-footer">Ayuda</a>
+        </div>
+        <div class="social">
+        </div>
+    
+         </footer>
+          <!-- AUMENTAR Y DISMINUIR-->
+
+
+
+<script>
+    let h1 = !!localStorage.getItem("ls_h1_letter") ? localStorage.getItem("ls_h1_letter") : '20'
+    let h2 = !!localStorage.getItem("ls_h2_letter") ? localStorage.getItem("ls_h2_letter") : '18'
+    let h3 = !!localStorage.getItem("ls_h3_letter") ? localStorage.getItem("ls_h3_letter") : '16'
+    let h4 = !!localStorage.getItem("ls_h4_letter") ? localStorage.getItem("ls_h4_letter") : '14'
+    let h5 = !!localStorage.getItem("ls_h5_letter") ? localStorage.getItem("ls_h5_letter") : '12'
+    let h6 = !!localStorage.getItem("ls_h6_letter") ? localStorage.getItem("ls_h6_letter") : '10'
+    let p = !!localStorage.getItem("ls_p_letter") ? localStorage.getItem("ls_p_etter") : '12'
+    
+    const updateLetter = () => {
+        verifyLetter()
+        const listH1 = document.getElementsByTagName("h1")
+        for (var i = 0; i < listH1.length; i++) {
+            var h1_letter = listH1[i];
+            if (!!h1_letter) {
+                h1_letter.className = ""
+                h1_letter.classList.add(`h1-${h1}`)
+            }
+        }
+         
+        const listH2 = document.getElementsByTagName("h2")
+        console.log(listH2)
+        for (var i = 0; i < listH2.length; i++) {
+            var h2_letter = listH2[i];
+            if (!!h2_letter) {
+                h2_letter.className = ""
+                h2_letter.classList.add(`h2-${h2}`)
+            }
+        }
+    
+        const listH3 = document.getElementsByTagName("h3")
+            console.log(listH3)
+            for (var i = 0; i < listH3.length; i++) {
+                var h3_letter = listH3[i];
+                if (!!h3_letter) {
+                    h3_letter.className = ""
+                    h3_letter.classList.add(`h3-${h3}`)
+                }
+            }
+        
+        
+        const listP = document.getElementsByTagName("p")
+        for (var i = 0; i < listP.length; i++) {
+            var p_letter = listP[i]
+            if (!!p_letter) {
+                p_letter.className = ""
+                p_letter.classList.add(`h1-${p}`)
+            }
+        }
+        const listA = document.getElementsByTagName("a")
+        for (var i = 0; i < listA.length; i++) {
+            var a_letter = listA[i]
+            if (!!a_letter) {
+                a_letter.className = ""
+                a_letter.classList.add(`a-${a}`)
+            }
+        } 
+    
+    
+    
+    }
+    const modifyLetter = number => {
+    localStorage.setItem("ls_h1_letter", number)
+    localStorage.setItem("ls_h2_letter", number)
+    localStorage.setItem("ls_h3_letter", number)
+    localStorage.setItem("ls_h4_letter", number)
+    localStorage.setItem("ls_h5_letter", number)
+    localStorage.setItem("ls_h6_letter", number)
+    localStorage.setItem("ls_p_letter", number)
+    
+    updateLetter()
+    }
+    
+    const verifyLetter = () => {
+    h1 = localStorage.getItem("ls_h1_letter")
+    h2 = localStorage.getItem("ls_h2_letter")
+    h3 = localStorage.getItem("ls_h3_letter")
+    h4 = localStorage.getItem("ls_h4_letter")
+    h5 = localStorage.getItem("ls_h5_letter")
+    h6 = localStorage.getItem("ls_h6_letter")
+    p = localStorage.getItem("ls_p_letter")
+    }
+    
+    </script>
+        
+
+
+
+</body>
+</html>
